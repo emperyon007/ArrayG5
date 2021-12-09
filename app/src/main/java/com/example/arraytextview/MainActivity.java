@@ -2,22 +2,27 @@ package com.example.arraytextview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-
-    String nazioni[] = {"Italia","Francia","Germania","Olanda"};
-    ListView LsStati;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LsStati = (ListView) findViewById(R.id.listaStati);
-        ArrayAdapter<String> aaStati = new ArrayAdapter<String>(this, R.layout.activity_main, nazioni);
-        LsStati.setAdapter(aaStati);
+        Button btExe = (Button)findViewById(R.id.button);
+
+        btExe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            }
+        });
     }
 }
