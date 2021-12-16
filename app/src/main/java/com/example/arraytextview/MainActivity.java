@@ -1,13 +1,11 @@
 package com.example.arraytextview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btExe = (Button)findViewById(R.id.button);
+        Button btExe = findViewById(R.id.button);
 
         btExe.setOnClickListener(new View.OnClickListener() {
             @Override

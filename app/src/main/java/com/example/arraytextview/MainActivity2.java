@@ -32,6 +32,10 @@ public class MainActivity2 extends AppCompatActivity {
                 String stato = (String)LsStati.getItemAtPosition(pos);
                 Log.d("errori: ", "poszione:" + pos);
 
+                Intent i = new Intent(getApplicationContext(), MainActivity3.class);
+                i.putExtra("key", stato);
+                startActivity(i);
+
                 int duration = Toast.LENGTH_SHORT;
                 Toast popStat = Toast.makeText(getApplicationContext(), stato, duration);
                 popStat.show();
